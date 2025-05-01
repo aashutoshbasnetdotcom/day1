@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome Back, Dev!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #1e1e2f, #3e3e5e);
+      color: #f5f5f5;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      animation: bounce 1s infinite alternate;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+    }
+    .box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin: 1rem auto;
+      max-width: 900px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+      transition: transform 0.4s;
+    }
+    .box:hover {
+      transform: scale(1.02) rotate(1deg);
+    }
+    .code {
+      font-family: monospace;
+      background: #000;
+      padding: 1rem;
+      border-radius: 10px;
+      overflow-x: auto;
+      color: lime;
+    }
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+    .footer {
+      text-align: center;
+      margin-top: 3rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Day 1 - GitHub Resurrection 💀✨</h1>
+
+  <div class="box">
+    <p>Yo. So it's been like... *forever* since I touched GitHub. So, made a new account, and heard angels sing (or maybe that was just my laptop fan struggling).<br><br>
+    Anyway. I'm back. With <strong>3 years of experience</strong> in building stuff, breaking stuff, and acting like I know what I'm doing.</p>
+  </div>
+
+  <div class="box">
+    <p>Let's get random. Here's a fact: <em>bananas are berries, but strawberries aren't.</em> Boom. Now this is a science website. Kinda.</p>
+  </div>
+
+  <div class="box">
+    <p>Here's some code I wrote once at 3 AM and still don’t know what it does:</p>
+    <div class="code">
+      let chaos = true;<br>
+      while (chaos) {<br>
+      &nbsp;&nbsp;console.log("Just shipping vibes 🚀");<br>
+      }
+    </div>
+  </div>
+
+  <div class="box">
+    <p>What is this project? Who knows. Will it be the next big thing? Probably not. But hey, it's mine, and it doesn't crash (yet).<br><br>
+    Stay tuned for more nonsense.</p>
+  </div>
+
+  <div class="box" id="randomBox">
+    <p id="randomText">Click me for a random dev thought 👉</p>
+  </div>
+
+  <div class="footer">
+    🚧 built with random urge and questionable decisions • 2025 🚧
+  </div>
+
+  <script>
+    const thoughts = [
+      "Commit messages are just diary entries for code.",
+      "Dark mode is not a preference, it’s a lifestyle.",
+      "This feature wasn't planned. It just... happened.",
+      "You could literally use your time doing productive thing then clicking here like _______ you fill in the blanks",
+      "If it works, don't touch it. If it doesn't, blame caching.",
+      "Stop clicking like _____, again fill in blanks",
+      "Tabs over spaces. Fight me.",
+      "I once fixed a bug by deleting the whole file. True story.",
+      "Console.log is my best friend. And my therapist.",
+    ];
+    document.getElementById("randomBox").addEventListener("click", () => {
+      const random = thoughts[Math.floor(Math.random() * thoughts.length)];
+      document.getElementById("randomText").textContent = random;
+    });
+  </script>
+</body>
+</html>
